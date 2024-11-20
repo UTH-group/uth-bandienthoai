@@ -43,7 +43,7 @@ $conn->close();
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Glide.js/3.4.1/css/glide.theme.css">
   <!-- Custom StyleSheet -->
   <link rel="stylesheet" href="./css/style.css" />
-  <title>Toyshop Lập trình web</title>
+  <title>Ban Dien Thoai</title>
 </head>
 
 <body>
