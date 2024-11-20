@@ -499,7 +499,7 @@ function saveUserInfo() {
     }
   };
 
-  xmlhttp.open("POST", "../config/save_user.php", true);
+  xmlhttp.open("POST", "./config/save_user.php", true);
   xmlhttp.send(formData);
 }
 
@@ -550,7 +550,7 @@ function search(keyword) {
 
 function addSkeletonLoader(count = 4) {
   const productContainer = document.querySelector(".product-center.container");
-  productContainer.innerHTML = "";
+  productContainer.innerHTML = ``;
 
   for (let i = 0; i < count; i++) {
     const skeleton = `
@@ -570,7 +570,7 @@ function sort(select = 1, page = 1) {
   const formData = new FormData();
   formData.append("sort", select);
 
-  document.querySelector(".product-center.container").innerHTML = "";
+  document.querySelector(".product-center.container").innerHTML = ``;
 
   addSkeletonLoader();
   fetch("../config/filtered_product.php?page=" + page, {
@@ -591,7 +591,7 @@ function loadCategory(categoryId, sort = 1, page = 1) {
   formData.append("category_id", categoryId);
   formData.append("sort", sort);
 
-  document.querySelector(".product-center.container").innerHTML = "";
+  document.querySelector(".product-center.container").innerHTML = ``;
 
   addSkeletonLoader();
 
@@ -728,7 +728,7 @@ function updateDistrictsAndWards() {
 
   // Clear existing options
   districtSelect.innerHTML = "";
-  wardSelect.innerHTML = "";
+  wardSelect.innerHTML = ``;
 
   // Populate districts based on selected city
   const selectedCity = citySelect.value;
